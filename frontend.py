@@ -11,3 +11,5 @@ Update entry
 Delete
 close
 '''
+
+print("test")
