@@ -7,4 +7,21 @@ def connect():
     conn.commit()
     conn.close()
 
+def insert(title,author,year,isbn):
+    conn = sqlite3.connect("books.db")
+    cur = conn.cursor()
+    cur.execute("INSERT INTO book VALUES (NULL,?,?,?,?)",(title,author,year,isbn)) #null because primary key is autoincrementing
+    conn.commit()
+    conn.close()
+
+def view():
+    conn = sqlite3.connect("books.db")
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM book")
+    rows = cur.fetchall()
+    conn.close()
+    return rows
+
 connect()
+insert("Wiedzmin","Sapko",200,123131)
+print(view())
