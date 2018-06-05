@@ -22,6 +22,15 @@ def view():
     conn.close()
     return rows
 
+def search(title="",author="",year="",isbn=""):
+    conn = sqlite3.connect("books.db")
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM book where title=? OR author=? OR year =? OR isbn=?",(title,author,year,isbn))
+    rows=cur.fetchall()
+    return rows
+
+
 connect()
-insert("Wiedzmin","Sapko",200,123131)
-print(view())
+insert("Game of Thrones","G.R. Martin",2008,9870443430)
+
+print(search(year=2008))
