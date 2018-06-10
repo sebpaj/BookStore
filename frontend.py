@@ -98,16 +98,6 @@ b3.grid(row=4,column=3)
 
 b4 = Button(window, text="Update selected", width=12)
 b4.grid(row=5,column=3)
-b4.grid(row=5,column=3)
-
-b5 = Button(window, text="Delete selected", width=12, command=delete_command)
-b5.grid(row=6,column=3)
-
-
-b5 = Button(window, text="Delete selected", width=12, command=delete_command)
-b5.grid(row=6,column=3)
-
-b4.grid(row=5,column=3)
 
 b5 = Button(window, text="Delete selected", width=12, command=delete_command)
 b5.grid(row=6,column=3)
