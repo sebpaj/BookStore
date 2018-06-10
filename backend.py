@@ -45,7 +45,7 @@ def update(id="",title="",author="",year="",isbn=""):
 
 connect()
 #insert("The Witchers","Andrzej Sapkowski",2004,9990443430)
-
-update(7,2007)
-print(view())
-print(search(year=2008))
+#delete(8)
+#update(7,2007)
+#print(view())
+#print(search(year=2008))
